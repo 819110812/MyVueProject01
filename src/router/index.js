@@ -1,9 +1,10 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Home from "../../../tabbar/src/views/home/Home";
-import Category from "../../../tabbar/src/views/category/Category";
-import Cart from "../../../tabbar/src/views/cart/Cart";
-import Profile from "../../../tabbar/src/views/profile/Profile";
+import Home from "@/views/home/Home";
+import Category from "@/views/category/Category";
+import Cart from "@/views/cart/Cart";
+import Profile from "@/views/profile/Profile";
+
 
 Vue.use(VueRouter)
 
@@ -40,3 +41,9 @@ const router = new VueRouter({
 })
 
 export default router
+
+
+const VueRouterPush = VueRouter.prototype.push
+VueRouter.prototype.push = function push (to) {
+  return VueRouterPush.call(this, to).catch(err => err)
+}
