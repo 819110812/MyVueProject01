@@ -12,7 +12,6 @@
   </script>
 
   <style scoped>
-    @import "../../assets/css/base.css";
 
     #tab-bar {
       display: flex;
