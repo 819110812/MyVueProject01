@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="tab-bar">
     <tab-bar>
       <tab-bar-item path="/home" >
         <img slot="item-icon" src="@/assets/img/tabbar/home.svg" alt="">
@@ -26,7 +26,6 @@
 </template>
 
 <script>
-
 import TabBar from "@/components/common/tabbar/TabBar";
 import TabBarItem from "@/components/common/tabbar/TabBarItem";
 
@@ -40,5 +39,8 @@ export default {
 </script>
 
 <style scoped>
-
+  .tab-bar{
+    /*background-color: #fff;*/
+    z-index: 10;
+  }
 </style>
